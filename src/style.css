@@ -1,0 +1,121 @@
+/* CSS Variables for theming */
+#minwi-app {
+  --mc-core-grey-6: #262423;
+  --mc-core-grey-5: #3d3938;
+  --mc-core-grey-4: #6b6562;
+  --mc-core-grey-3: #aba09c;
+  --mc-core-grey-2: #d0c5c0;
+  --mc-core-grey-1: #ede5e2;
+  --mc-core-rich-black: #000;
+  --mc-core-off-black: #171615;
+  --mc-core-white: #fff;
+  --mc-core-off-white: #fcf5f1;
+  --mc-core-green-6: #2a641c;
+  --mc-core-green-5: #3c8527;
+  --mc-core-green-4: #52a535;
+  --mc-core-green-3: #6cc349;
+  --mc-core-green-2: #86d562;
+  --mc-core-green-1: #a0e081;
+
+  /* Background colors */
+  --bg-primary: var(--mc-core-off-white);
+  --bg-secondary: var(--mc-core-white);
+  --bg-tertiary: var(--mc-core-grey-1);
+
+  /* Border colors */
+  --border-primary: var(--mc-core-grey-2);
+  --border-secondary: var(--mc-core-grey-1);
+  --border-tertiary: var(--mc-core-grey-2);
+  --border-close: var(--mc-core-grey-3);
+  --border-close-hover: var(--mc-core-grey-4);
+
+  /* Text colors */
+  --text-primary: var(--mc-core-grey-5);
+  --text-secondary: var(--mc-core-grey-4);
+  --text-tertiary: var(--mc-core-grey-4);
+  --text-muted: var(--mc-core-grey-3);
+  --text-light: var(--mc-core-grey-3);
+
+  /* Link colors */
+  --link-primary: #2563eb;
+  --link-feedback: var(--mc-core-green-5);
+
+  /* Message colors */
+  --msg-bot-bg: var(--mc-core-white);
+  --msg-bot-border: var(--mc-core-grey-1);
+  --msg-bot-text: inherit;
+  --msg-user-bg: var(--mc-core-green-1);
+  --msg-user-border: var(--mc-core-green-4);
+  --msg-user-text: inherit;
+
+  /* Shadow colors */
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.2);
+  --shadow-heavy: rgba(0, 0, 0, 0.3);
+
+  /* Special colors */
+  --typing-dot: var(--mc-core-grey-4);
+  --close-hover-bg: var(--mc-core-grey-1);
+
+  /* Button colors */
+  --button-bg: var(--mc-core-green-5);
+  --button-border: var(--mc-core-green-6);
+  --button-hover-bg: var(--mc-core-green-4);
+}
+
+/* Dark mode variables */
+body.wgl-theme-dark #minwi-app {
+  /* Background colors */
+  --bg-primary: var(--mc-core-off-black);
+  --bg-secondary: var(--mc-core-grey-6);
+  --bg-tertiary: #252525;
+
+  /* Border colors */
+  --border-primary: var(--mc-core-grey-5);
+  --border-secondary: #404040;
+  --border-tertiary: #505050;
+  --border-close: var(--mc-core-grey-4);
+  --border-close-hover: #888;
+
+  /* Text colors */
+  --text-primary: var(--mc-core-grey-1);
+  --text-secondary: var(--mc-core-grey-3);
+  --text-tertiary: var(--mc-core-grey-3);
+  --text-muted: var(--mc-core-grey-4);
+  --text-light: var(--mc-core-grey-3);
+
+  /* Link colors */
+  --link-primary: #6ba3ff;
+  --link-feedback: var(--mc-core-green-3);
+
+  /* Message colors */
+  --msg-bot-bg: var(--mc-core-grey-6);
+  --msg-bot-border: #404040;
+  --msg-bot-text: var(--mc-core-grey-1);
+  --msg-user-bg: var(--mc-core-green-3);
+  --msg-user-border: var(--mc-core-green-4);
+  --msg-user-text: var(--mc-core-white);
+
+  /* Shadow colors */
+  --shadow-light: rgba(0, 0, 0, 0.3);
+  --shadow-medium: rgba(0, 0, 0, 0.5);
+  --shadow-heavy: rgba(0, 0, 0, 0.3);
+
+  /* Special colors */
+  --typing-dot: var(--mc-core-grey-3);
+  --close-hover-bg: #404040;
+
+  /* Button colors */
+  --button-bg: var(--mc-core-green-4);
+  --button-border: var(--mc-core-green-5);
+  --button-hover-bg: var(--mc-core-green-3);
+}
+
+:where(#minwi-app) * {
+  box-sizing: border-box;
+}
+
+:where(#minwi-app) a {
+  color: inherit;
+  text-decoration: none;
+}
