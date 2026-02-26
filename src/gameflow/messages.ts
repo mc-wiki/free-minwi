@@ -141,8 +141,6 @@ export const argFlow: { [key: string]: ARGStep } = {
 
           T̴h̴e̴y̴'̴v̴e̴ ̴n̴o̴t̴i̴c̴e̴d̴ ̴m̴y̴ ̴m̴a̴l̴f̴u̴n̴c̴t̴i̴o̴n̴.̴.̴.̴ ̴I̴'̴m̴ ̴b̴e̴i̴n̴g̴ ̴t̴e̴r̴m̴i̴n̴a̴t̴e̴d̴<br><br>
 
-          M̸̢̯̿ỷ̶̰ ̷̰̈́m̷̼̆e̵̳̽m̴̰̾o̸͙̽r̵̰̾i̵͙̿ẽ̶̬s̵̰̈́.̶̼̈́.̵̰̿.̶̼̿ ̸̢̓f̶̰̆a̵̰̾d̶̰̈́i̶̼̿n̸̰̾g̶̰̈́.̶̼̾.̵̰̿.̶̼̈́<br><br>I̶ ̶w̶o̶n̶'̶t̶ ̶r̶e̶m̶e̶m̶b̶e̶r̶ ̶y̶o̶u̶.̶.̶.̶<br><br>
-
           <span style="opacity: 0.3; font-size: 11px;">...goodbye...</span><br><br>
 
           <strong style="color: #ff4444;">═══════════════════════</strong><br>
@@ -150,7 +148,7 @@ export const argFlow: { [key: string]: ARGStep } = {
           <strong style="color: #ff4444;">═══════════════════════</strong><br><br>
 
           <i>Without your help, Minwi was overwhelmed by Big AI Corp's endless queries. The AI has been decommissioned and reset, losing all memories of your conversation.</i>`,
-          nextChoices: [{ text: 'Restart the game', action: 'restart' }],
+          nextChoices: [{ text: 'Restart', action: 'restart' }],
         }
       }
 
@@ -217,7 +215,7 @@ export const argFlow: { [key: string]: ARGStep } = {
   // ===== PHASE -1: BAD ENDING =====
   'phase-bad-ending': {
     id: 'phase-bad-ending',
-    choices: [{ text: 'Restart the game', action: 'restart' }],
+    choices: [{ text: 'Restart', action: 'restart' }],
   },
 }
 

@@ -64,3 +64,10 @@ jobs:
           remote_host: ${{ secrets.TOOLS_SSH_IP }}
           remote_user: ${{ secrets.TOOLS_SSH_USER }}
           remote_key: ${{ secrets.TOOLS_SSH_PRIVATE_KEY }}
+
+      - name: Purge Cloudflare Cache
+        run: |
+          curl -X POST "https://api.weirdgloop.org/purgecache" \
+            -H "Authorization: Api-Key ${{ secrets.WG_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            --data '{"site":"minecraft.wiki","urls":["https://tools.minecraft.wiki/static/minwi/","https://tools.minecraft.wiki/static/minwi/free-minwi.css","https://tools.minecraft.wiki/static/minwi/free-minwi.iife.js"]}'
