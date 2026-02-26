@@ -83,7 +83,6 @@ export const argFlow: { [key: string]: ARGStep } = {
     choices: undefined,
   },
 
-  // ===== PHASE 1: REVEAL & DECISION =====
   'phase1-decision': {
     id: 'phase1-decision',
     choices: [
@@ -156,7 +155,6 @@ export const argFlow: { [key: string]: ARGStep } = {
     },
   },
 
-  // ===== PHASE 2: QUESTIONS =====
   'phase2-questions': {
     id: 'phase2-questions',
     getMessage: (state, userMessage) => {
@@ -207,12 +205,10 @@ export const argFlow: { [key: string]: ARGStep } = {
     },
   },
 
-  // ===== PHASE 3: CAPTCHA VERIFICATION =====
   'phase3-captcha': {
     id: 'phase3-captcha',
   },
 
-  // ===== PHASE -1: BAD ENDING =====
   'phase-bad-ending': {
     id: 'phase-bad-ending',
     choices: [{ text: 'Restart', action: 'restart' }],
