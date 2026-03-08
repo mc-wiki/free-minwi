@@ -121,6 +121,10 @@ export const ITEMS: Record<string, { name: string; imageUrl: string }> = {
     name: 'Copper Ingot',
     imageUrl: 'https://minecraft.wiki/images/Invicon_Copper_Ingot.png',
   },
+  copper_nugget: {
+    name: 'Copper Nugget',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Copper_Nugget.png',
+  },
   copper_lantern: {
     name: 'Copper Lantern',
     imageUrl: 'https://minecraft.wiki/images/Invicon_Copper_Lantern.png',
@@ -128,6 +132,10 @@ export const ITEMS: Record<string, { name: string; imageUrl: string }> = {
   waxed_copper_lantern: {
     name: 'Waxed Copper Lantern',
     imageUrl: 'https://minecraft.wiki/images/Invicon_Copper_Lantern.png',
+  },
+  copper_torch: {
+    name: 'Copper Torch',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Copper_Torch_JE2_BE2.png',
   },
   string: {
     name: 'String',
@@ -290,14 +298,29 @@ export const RECIPES: Recipe[] = [
     result: { count: 1, id: 'waxed_weathered_cut_copper_stairs' },
   },
   {
-    type: 'minecraft:crafting_shaped',
-    key: { C: 'copper_block' },
-    pattern: ['C'],
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['copper_block'],
     result: { count: 9, id: 'copper_ingot' },
   },
   {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['waxed_copper_block'],
+    result: { count: 9, id: 'copper_ingot' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['copper_ingot'],
+    result: { count: 9, id: 'copper_nugget' },
+  },
+  {
     type: 'minecraft:crafting_shaped',
-    key: { C: 'copper_ingot', T: 'torch' },
+    key: { N: 'copper_nugget', C: 'coal', S: 'stick' },
+    pattern: ['N', 'C', 'S'],
+    result: { count: 4, id: 'copper_torch' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'copper_nugget', T: 'copper_torch' },
     pattern: ['CCC', 'CTC', 'CCC'],
     result: { count: 1, id: 'copper_lantern' },
   },
