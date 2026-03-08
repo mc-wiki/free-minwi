@@ -290,19 +290,6 @@ async function handleCaptchaCorrect() {
     }
   }
 }
-
-function handleCaptchaIncorrect() {
-  if (isProcessing.value || argState.value.currentCaptcha === null) return
-
-  // Wrong answer - move to back of queue and show next
-  const failedCaptcha = argState.value.captchaQueue.shift()!
-  argState.value.captchaQueue.push(failedCaptcha)
-
-  if (argState.value.captchaQueue.length > 0) {
-    const nextIndex = argState.value.captchaQueue[0]!
-    argState.value.currentCaptcha = nextIndex
-  }
-}
 </script>
 
 <template>
@@ -372,7 +359,6 @@ function handleCaptchaIncorrect() {
       :showInterface="true"
       @handleCaptchaVerify="handleCaptchaVerify"
       @captchaCorrect="handleCaptchaCorrect"
-      @captchaIncorrect="handleCaptchaIncorrect"
     />
 
     <!-- Input Area - show when not in choice mode and not in CAPTCHA mode -->

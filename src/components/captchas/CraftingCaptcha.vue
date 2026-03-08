@@ -51,11 +51,10 @@ const heldCount = ref(0)
 
 const craftingOutput = computed(() => {
   const grid = slots.value.slice(0, 9).map((s) => s.item)
-  const match = RECIPES.filter((r) => r.result.id === props.desiredItem).find(
-    (r) =>
-      r.type === 'minecraft:crafting_shaped'
-        ? matchShaped(r, grid)
-        : matchShapeless(r, grid),
+  const match = RECIPES.find((r) =>
+    r.type === 'minecraft:crafting_shaped'
+      ? matchShaped(r, grid)
+      : matchShapeless(r, grid),
   )
   return match?.result ?? null
 })
@@ -419,9 +418,7 @@ const handleKeyDown = (event: KeyboardEvent) => {
 const consumeCraft = () => {
   const grid = slots.value.slice(0, 9).map((s) => s.item)
 
-  for (const recipe of RECIPES.filter(
-    (r) => r.result.id === props.desiredItem,
-  )) {
+  for (const recipe of RECIPES) {
     if (recipe.type === 'minecraft:crafting_shaped') {
       const patternHeight = recipe.pattern.length
       const patternWidth = Math.max(...recipe.pattern.map((r) => r.length))
@@ -495,7 +492,11 @@ const handleResultMouseDown = (event: MouseEvent) => {
 
 const submit = () => {
   if (props.isProcessing) return
-  if (craftingOutput.value) emit('correct')
+  if (
+    heldItem.value === props.desiredItem ||
+    slots.value.some((slot) => slot.item === props.desiredItem)
+  )
+    emit('correct')
   else emit('incorrect')
   reset()
 }

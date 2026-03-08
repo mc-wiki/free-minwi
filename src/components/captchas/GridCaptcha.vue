@@ -10,7 +10,6 @@ export interface GridConfig {
 
 const props = defineProps<{
   isProcessing: boolean
-  answerValidator: ((answer: string) => boolean) | null
   gridConfig?: GridConfig
 }>()
 

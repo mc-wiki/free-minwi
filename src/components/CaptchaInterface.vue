@@ -23,10 +23,6 @@ const currentCaptcha = computed(() => {
   return getCaptcha(props.argState.currentCaptcha)
 })
 
-const answerValidator = computed(() => {
-  return currentCaptcha.value?.answer ?? null
-})
-
 const gridCaptchaRef = ref<InstanceType<typeof GridCaptcha> | null>(null)
 const craftingCaptchaRef = ref<InstanceType<typeof CraftingCaptcha> | null>(
   null,
@@ -42,7 +38,6 @@ const hasValidInput = computed(() => {
   return false
 })
 
-// Handle reset button
 const handleReset = () => {
   if (currentCaptcha.value?.type === 'grid') {
     gridCaptchaRef.value?.reset()
@@ -51,7 +46,6 @@ const handleReset = () => {
   }
 }
 
-// Handle submit button
 const handleSubmit = () => {
   if (props.isProcessing || !hasValidInput.value) return
 
@@ -74,7 +68,7 @@ const handleSubmit = () => {
       </button>
       <label class="captcha-button-label">I'm not a robot</label>
       <div class="captcha-button-logo">
-        <div class="captcha-button-logo-text">reCAPTCHA</div>
+        <div class="captcha-button-logo-text">weCAPTCHA</div>
         <a
           class="captcha-button-logo-subtext"
           href="https://youtu.be/41O_MydqxTU?t=23"
@@ -99,22 +93,21 @@ const handleSubmit = () => {
 
     <GridCaptcha
       v-if="currentCaptcha?.type === 'grid'"
+      :key="argState.currentCaptcha!"
       ref="gridCaptchaRef"
       :isProcessing="isProcessing"
-      :answerValidator="answerValidator"
       :gridConfig="currentCaptcha?.gridConfig"
       @correct="emit('captchaCorrect')"
-      @incorrect="emit('captchaIncorrect')"
     />
 
     <CraftingCaptcha
       v-else-if="currentCaptcha?.type === 'crafting'"
+      :key="argState.currentCaptcha!"
       ref="craftingCaptchaRef"
       :isProcessing="isProcessing"
       :inventory="currentCaptcha.inventory!"
       :desiredItem="currentCaptcha.desiredItem!"
       @correct="emit('captchaCorrect')"
-      @incorrect="emit('captchaIncorrect')"
     />
 
     <div class="captcha-bottom-container">
