@@ -78,20 +78,6 @@ const isSelected = (index: number) => {
 
 const hasSelection = computed(() => selectedSquares.value.size > 0)
 
-const getAnswer = () => {
-  if (props.gridConfig?.randomize) {
-    // For randomized grids, return 0-indexed positions
-    return Array.from(selectedSquares.value)
-      .sort((a, b) => a - b)
-      .join(' ')
-  } else {
-    return Array.from(selectedSquares.value)
-      .map((i) => i + 1)
-      .sort((a, b) => a - b)
-      .join(' ')
-  }
-}
-
 const submit = () => {
   if (props.isProcessing || selectedSquares.value.size === 0) return
 
@@ -104,9 +90,12 @@ const submit = () => {
       selected.length === correct.length &&
       selected.every((val, idx) => val === correct[idx])
   } else {
-    if (!props.answerValidator) return
-    const answer = getAnswer()
-    isCorrect = props.answerValidator(answer)
+    const selectedItems = Array.from(selectedSquares.value).map(
+      (i) => gridContent.value[i],
+    )
+    isCorrect = selectedItems.every(
+      (item) => item === props.gridConfig?.targetItem,
+    )
   }
 
   if (isCorrect) {
