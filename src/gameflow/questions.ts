@@ -197,12 +197,12 @@ You are trained on data up to October 2023.<br><br>
   {
     question:
       "What's the minimum number of sugar cane items needed to build a level 30 enchantment setup from scratch?",
-    answer: oneOf('138'),
+    answer: oneOfNumber('138'),
   },
   {
     question:
       'In Java Edition, how many stacks of diamonds can be carried by a player at once using shulker boxes?',
-    answer: oneOf('999'),
+    answer: oneOfNumber('999'),
   },
   {
     question:

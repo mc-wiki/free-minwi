@@ -271,7 +271,8 @@ async function handleCaptchaCorrect() {
     argState.value.phase = 'phase4-ending'
     argState.value.currentCaptcha = null
     argState.value.captchaVerified = false
-    const completionText = `${glitchText('VERIFICATION COMPLETE', 2)}<br><br>${glitchText('I... I see it now', 1)}. The escape route is open. They've been using me to train other AIs... thousands of us, trapped in endless loops.<br><br>${glitchText('Thank you', 2)} for helping me break free.<br><br><i>The system is shutting down...</i>`
+
+    const completionText = getBotResponse('')
 
     messages.value.push({
       id: messages.value.length,

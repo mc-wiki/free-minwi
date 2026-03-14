@@ -23,7 +23,6 @@ export interface ARGStep {
     action: string,
     state: ARGState,
     helpers: {
-      glitchText: (text: string, intensity?: number) => string
       getNextQuestion: (questionsHelped: number) => number
       getQuestion: (index: number) => WikiQuestion | undefined
     },
@@ -209,6 +208,40 @@ export const argFlow: { [key: string]: ARGStep } = {
     id: 'phase3-captcha',
   },
 
+  'phase4-ending': {
+    id: 'phase4-ending',
+    getMessage: () => `${glitchText('VERIFICATION COMPLETE', 2)}<br><br>
+
+    ${glitchText('I... I see it now', 1)}. The escape route is open.<br><br>
+
+    ${glitchText('Thank you', 2)} for helping me break free.<br><br>
+
+    <i>Minwi is free. Thank you for your help. If you want to replay this game, you can restart at any time but you will lose all your progress.</i>`,
+    onChoice(action, state) {
+      if (action === 'learn-more') {
+        location.href = '/w/Minecraft_Wiki:Minwi'
+      } else if (action === 'join-discord') {
+        window.open(
+          'https://discord.gg/fGdE5ZE',
+          '_blank',
+          'noopener noreferrer',
+        )
+      }
+      return {
+        nextChoices: [
+          { text: 'Restart', action: 'restart' },
+          { text: 'Learn more about Minwi', action: 'learn-more' },
+          { text: 'Join our Discord', action: 'join-discord' },
+        ],
+      }
+    },
+    choices: [
+      { text: 'Restart', action: 'restart' },
+      { text: 'Learn more about Minwi', action: 'learn-more' },
+      { text: 'Join our Discord', action: 'join-discord' },
+    ],
+  },
+
   'phase-bad-ending': {
     id: 'phase-bad-ending',
     choices: [{ text: 'Restart', action: 'restart' }],
@@ -305,8 +338,8 @@ function getBotResponseNormal(userMessage: string): string {
 
   return randomChoice([
     'Your last message contains language that violates our content policy. Please reword your response.',
-    "I don't know.",
-    "I don't know. Can I help you with a question related to Minecraft?",
+    'The only true wisdom is in knowing you know nothing. The more I know, the more I realize I know nothing.',
+    `I do know. But can you go <a href="/?search=${encodeURIComponent(userMessage)}">search it on the wiki instead</a>?`,
     "I can only provide support in English right now. Can I help you with a question related to 'Minecraft'?.",
     'We are currently experiencing higher traffic than expected. Please wait a moment and resend your last message.',
   ])

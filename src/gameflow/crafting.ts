@@ -99,6 +99,10 @@ export const ITEMS: Record<string, { name: string; imageUrl: string }> = {
     name: 'Waxed Oxidized Block of Copper',
     imageUrl: 'https://minecraft.wiki/images/Invicon_Oxidized_Copper.png',
   },
+  waxed_weathered_copper: {
+    name: 'Waxed Weathered Block of Copper',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Weathered_Copper.png',
+  },
   weathered_cut_copper: {
     name: 'Weathered Cut Block of Copper',
     imageUrl: 'https://minecraft.wiki/images/Invicon_Weathered_Cut_Copper.png',
@@ -116,6 +120,164 @@ export const ITEMS: Record<string, { name: string; imageUrl: string }> = {
     name: 'Waxed Weathered Cut Copper Stairs',
     imageUrl:
       'https://minecraft.wiki/images/Invicon_Weathered_Cut_Copper_Stairs.png',
+  },
+  cut_copper: {
+    name: 'Cut Copper',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Cut_Copper.png',
+  },
+  exposed_cut_copper: {
+    name: 'Exposed Cut Copper',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Exposed_Cut_Copper.png',
+  },
+  oxidized_cut_copper: {
+    name: 'Oxidized Cut Copper',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Oxidized_Cut_Copper.png',
+  },
+  waxed_cut_copper: {
+    name: 'Waxed Cut Copper',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Cut_Copper.png',
+  },
+  waxed_exposed_cut_copper: {
+    name: 'Waxed Exposed Cut Copper',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Exposed_Cut_Copper.png',
+  },
+  waxed_oxidized_cut_copper: {
+    name: 'Waxed Oxidized Cut Copper',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Oxidized_Cut_Copper.png',
+  },
+  cut_copper_stairs: {
+    name: 'Cut Copper Stairs',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Cut_Copper_Stairs.png',
+  },
+  exposed_cut_copper_stairs: {
+    name: 'Exposed Cut Copper Stairs',
+    imageUrl:
+      'https://minecraft.wiki/images/Invicon_Exposed_Cut_Copper_Stairs.png',
+  },
+  oxidized_cut_copper_stairs: {
+    name: 'Oxidized Cut Copper Stairs',
+    imageUrl:
+      'https://minecraft.wiki/images/Invicon_Oxidized_Cut_Copper_Stairs.png',
+  },
+  waxed_cut_copper_stairs: {
+    name: 'Waxed Cut Copper Stairs',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Cut_Copper_Stairs.png',
+  },
+  waxed_exposed_cut_copper_stairs: {
+    name: 'Waxed Exposed Cut Copper Stairs',
+    imageUrl:
+      'https://minecraft.wiki/images/Invicon_Exposed_Cut_Copper_Stairs.png',
+  },
+  waxed_oxidized_cut_copper_stairs: {
+    name: 'Waxed Oxidized Cut Copper Stairs',
+    imageUrl:
+      'https://minecraft.wiki/images/Invicon_Oxidized_Cut_Copper_Stairs.png',
+  },
+  cut_copper_slab: {
+    name: 'Cut Copper Slab',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Cut_Copper_Slab.png',
+  },
+  exposed_cut_copper_slab: {
+    name: 'Exposed Cut Copper Slab',
+    imageUrl:
+      'https://minecraft.wiki/images/Invicon_Exposed_Cut_Copper_Slab.png',
+  },
+  weathered_cut_copper_slab: {
+    name: 'Weathered Cut Copper Slab',
+    imageUrl:
+      'https://minecraft.wiki/images/Invicon_Weathered_Cut_Copper_Slab.png',
+  },
+  oxidized_cut_copper_slab: {
+    name: 'Oxidized Cut Copper Slab',
+    imageUrl:
+      'https://minecraft.wiki/images/Invicon_Oxidized_Cut_Copper_Slab.png',
+  },
+  waxed_cut_copper_slab: {
+    name: 'Waxed Cut Copper Slab',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Cut_Copper_Slab.png',
+  },
+  waxed_exposed_cut_copper_slab: {
+    name: 'Waxed Exposed Cut Copper Slab',
+    imageUrl:
+      'https://minecraft.wiki/images/Invicon_Exposed_Cut_Copper_Slab.png',
+  },
+  waxed_weathered_cut_copper_slab: {
+    name: 'Waxed Weathered Cut Copper Slab',
+    imageUrl:
+      'https://minecraft.wiki/images/Invicon_Weathered_Cut_Copper_Slab.png',
+  },
+  waxed_oxidized_cut_copper_slab: {
+    name: 'Waxed Oxidized Cut Copper Slab',
+    imageUrl:
+      'https://minecraft.wiki/images/Invicon_Oxidized_Cut_Copper_Slab.png',
+  },
+  copper_stairs: {
+    name: 'Copper Stairs',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Copper_Stairs.png',
+  },
+  exposed_copper_stairs: {
+    name: 'Exposed Copper Stairs',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Exposed_Copper_Stairs.png',
+  },
+  weathered_copper_stairs: {
+    name: 'Weathered Copper Stairs',
+    imageUrl:
+      'https://minecraft.wiki/images/Invicon_Weathered_Copper_Stairs.png',
+  },
+  oxidized_copper_stairs: {
+    name: 'Oxidized Copper Stairs',
+    imageUrl:
+      'https://minecraft.wiki/images/Invicon_Oxidized_Copper_Stairs.png',
+  },
+  waxed_copper_stairs: {
+    name: 'Waxed Copper Stairs',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Copper_Stairs.png',
+  },
+  waxed_exposed_copper_stairs: {
+    name: 'Waxed Exposed Copper Stairs',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Exposed_Copper_Stairs.png',
+  },
+  waxed_weathered_copper_stairs: {
+    name: 'Waxed Weathered Copper Stairs',
+    imageUrl:
+      'https://minecraft.wiki/images/Invicon_Weathered_Copper_Stairs.png',
+  },
+  waxed_oxidized_copper_stairs: {
+    name: 'Waxed Oxidized Copper Stairs',
+    imageUrl:
+      'https://minecraft.wiki/images/Invicon_Oxidized_Copper_Stairs.png',
+  },
+  copper_slab: {
+    name: 'Copper Slab',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Copper_Slab.png',
+  },
+  exposed_copper_slab: {
+    name: 'Exposed Copper Slab',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Exposed_Copper_Slab.png',
+  },
+  weathered_copper_slab: {
+    name: 'Weathered Copper Slab',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Weathered_Copper_Slab.png',
+  },
+  oxidized_copper_slab: {
+    name: 'Oxidized Copper Slab',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Oxidized_Copper_Slab.png',
+  },
+  waxed_copper_slab: {
+    name: 'Waxed Copper Slab',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Copper_Slab.png',
+  },
+  waxed_exposed_copper_slab: {
+    name: 'Waxed Exposed Copper Slab',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Exposed_Copper_Slab.png',
+  },
+  waxed_weathered_copper_slab: {
+    name: 'Waxed Weathered Copper Slab',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Weathered_Copper_Slab.png',
+  },
+  waxed_oxidized_copper_slab: {
+    name: 'Waxed Oxidized Copper Slab',
+    imageUrl: 'https://minecraft.wiki/images/Invicon_Oxidized_Copper_Slab.png',
   },
   copper_ingot: {
     name: 'Copper Ingot',
@@ -252,8 +414,6 @@ export const RECIPES: Recipe[] = [
     ingredients: ['weathered_copper_bulb', 'honeycomb'],
     result: { count: 1, id: 'waxed_weathered_copper_bulb' },
   },
-
-  // --- weathered cut copper stairs ---
   {
     type: 'minecraft:crafting_shaped',
     key: { W: 'weathered_copper' },
@@ -352,6 +512,423 @@ export const RECIPES: Recipe[] = [
     key: { G: 'gold_nugget', D: 'dandelion' },
     pattern: ['GGG', 'GDG', 'GGG'],
     result: { count: 1, id: 'golden_dandelion' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'copper_block' },
+    pattern: ['CC', 'CC'],
+    result: { count: 4, id: 'cut_copper' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'exposed_copper' },
+    pattern: ['CC', 'CC'],
+    result: { count: 4, id: 'exposed_cut_copper' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'oxidized_copper' },
+    pattern: ['CC', 'CC'],
+    result: { count: 4, id: 'oxidized_cut_copper' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_copper_block' },
+    pattern: ['CC', 'CC'],
+    result: { count: 4, id: 'waxed_cut_copper' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_exposed_copper' },
+    pattern: ['CC', 'CC'],
+    result: { count: 4, id: 'waxed_exposed_cut_copper' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_weathered_copper' },
+    pattern: ['CC', 'CC'],
+    result: { count: 4, id: 'waxed_weathered_cut_copper' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_oxidized_copper' },
+    pattern: ['CC', 'CC'],
+    result: { count: 4, id: 'waxed_oxidized_cut_copper' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['cut_copper', 'honeycomb'],
+    result: { count: 1, id: 'waxed_cut_copper' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['exposed_cut_copper', 'honeycomb'],
+    result: { count: 1, id: 'waxed_exposed_cut_copper' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['weathered_cut_copper', 'honeycomb'],
+    result: { count: 1, id: 'waxed_weathered_cut_copper' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['oxidized_cut_copper', 'honeycomb'],
+    result: { count: 1, id: 'waxed_oxidized_cut_copper' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'cut_copper' },
+    pattern: ['C  ', 'CC ', 'CCC'],
+    result: { count: 4, id: 'cut_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'cut_copper' },
+    pattern: ['  C', ' CC', 'CCC'],
+    result: { count: 4, id: 'cut_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'exposed_cut_copper' },
+    pattern: ['C  ', 'CC ', 'CCC'],
+    result: { count: 4, id: 'exposed_cut_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'exposed_cut_copper' },
+    pattern: ['  C', ' CC', 'CCC'],
+    result: { count: 4, id: 'exposed_cut_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'oxidized_cut_copper' },
+    pattern: ['C  ', 'CC ', 'CCC'],
+    result: { count: 4, id: 'oxidized_cut_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'oxidized_cut_copper' },
+    pattern: ['  C', ' CC', 'CCC'],
+    result: { count: 4, id: 'oxidized_cut_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_cut_copper' },
+    pattern: ['C  ', 'CC ', 'CCC'],
+    result: { count: 4, id: 'waxed_cut_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_cut_copper' },
+    pattern: ['  C', ' CC', 'CCC'],
+    result: { count: 4, id: 'waxed_cut_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_exposed_cut_copper' },
+    pattern: ['C  ', 'CC ', 'CCC'],
+    result: { count: 4, id: 'waxed_exposed_cut_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_exposed_cut_copper' },
+    pattern: ['  C', ' CC', 'CCC'],
+    result: { count: 4, id: 'waxed_exposed_cut_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_weathered_cut_copper' },
+    pattern: ['C  ', 'CC ', 'CCC'],
+    result: { count: 4, id: 'waxed_weathered_cut_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_weathered_cut_copper' },
+    pattern: ['  C', ' CC', 'CCC'],
+    result: { count: 4, id: 'waxed_weathered_cut_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_oxidized_cut_copper' },
+    pattern: ['C  ', 'CC ', 'CCC'],
+    result: { count: 4, id: 'waxed_oxidized_cut_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_oxidized_cut_copper' },
+    pattern: ['  C', ' CC', 'CCC'],
+    result: { count: 4, id: 'waxed_oxidized_cut_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['cut_copper_stairs', 'honeycomb'],
+    result: { count: 1, id: 'waxed_cut_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['exposed_cut_copper_stairs', 'honeycomb'],
+    result: { count: 1, id: 'waxed_exposed_cut_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['oxidized_cut_copper_stairs', 'honeycomb'],
+    result: { count: 1, id: 'waxed_oxidized_cut_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'cut_copper' },
+    pattern: ['CCC'],
+    result: { count: 6, id: 'cut_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'exposed_cut_copper' },
+    pattern: ['CCC'],
+    result: { count: 6, id: 'exposed_cut_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'weathered_cut_copper' },
+    pattern: ['CCC'],
+    result: { count: 6, id: 'weathered_cut_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'oxidized_cut_copper' },
+    pattern: ['CCC'],
+    result: { count: 6, id: 'oxidized_cut_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_cut_copper' },
+    pattern: ['CCC'],
+    result: { count: 6, id: 'waxed_cut_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_exposed_cut_copper' },
+    pattern: ['CCC'],
+    result: { count: 6, id: 'waxed_exposed_cut_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_weathered_cut_copper' },
+    pattern: ['CCC'],
+    result: { count: 6, id: 'waxed_weathered_cut_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_oxidized_cut_copper' },
+    pattern: ['CCC'],
+    result: { count: 6, id: 'waxed_oxidized_cut_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['cut_copper_slab', 'honeycomb'],
+    result: { count: 1, id: 'waxed_cut_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['exposed_cut_copper_slab', 'honeycomb'],
+    result: { count: 1, id: 'waxed_exposed_cut_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['weathered_cut_copper_slab', 'honeycomb'],
+    result: { count: 1, id: 'waxed_weathered_cut_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['oxidized_cut_copper_slab', 'honeycomb'],
+    result: { count: 1, id: 'waxed_oxidized_cut_copper_slab' },
+  },
+
+  // --- copper stairs ---
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'copper_block' },
+    pattern: ['C  ', 'CC ', 'CCC'],
+    result: { count: 4, id: 'copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'copper_block' },
+    pattern: ['  C', ' CC', 'CCC'],
+    result: { count: 4, id: 'copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'exposed_copper' },
+    pattern: ['C  ', 'CC ', 'CCC'],
+    result: { count: 4, id: 'exposed_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'exposed_copper' },
+    pattern: ['  C', ' CC', 'CCC'],
+    result: { count: 4, id: 'exposed_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'weathered_copper' },
+    pattern: ['C  ', 'CC ', 'CCC'],
+    result: { count: 4, id: 'weathered_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'weathered_copper' },
+    pattern: ['  C', ' CC', 'CCC'],
+    result: { count: 4, id: 'weathered_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'oxidized_copper' },
+    pattern: ['C  ', 'CC ', 'CCC'],
+    result: { count: 4, id: 'oxidized_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'oxidized_copper' },
+    pattern: ['  C', ' CC', 'CCC'],
+    result: { count: 4, id: 'oxidized_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_copper_block' },
+    pattern: ['C  ', 'CC ', 'CCC'],
+    result: { count: 4, id: 'waxed_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_copper_block' },
+    pattern: ['  C', ' CC', 'CCC'],
+    result: { count: 4, id: 'waxed_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_exposed_copper' },
+    pattern: ['C  ', 'CC ', 'CCC'],
+    result: { count: 4, id: 'waxed_exposed_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_exposed_copper' },
+    pattern: ['  C', ' CC', 'CCC'],
+    result: { count: 4, id: 'waxed_exposed_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_weathered_copper' },
+    pattern: ['C  ', 'CC ', 'CCC'],
+    result: { count: 4, id: 'waxed_weathered_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_weathered_copper' },
+    pattern: ['  C', ' CC', 'CCC'],
+    result: { count: 4, id: 'waxed_weathered_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_oxidized_copper' },
+    pattern: ['C  ', 'CC ', 'CCC'],
+    result: { count: 4, id: 'waxed_oxidized_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_oxidized_copper' },
+    pattern: ['  C', ' CC', 'CCC'],
+    result: { count: 4, id: 'waxed_oxidized_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['copper_stairs', 'honeycomb'],
+    result: { count: 1, id: 'waxed_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['exposed_copper_stairs', 'honeycomb'],
+    result: { count: 1, id: 'waxed_exposed_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['weathered_copper_stairs', 'honeycomb'],
+    result: { count: 1, id: 'waxed_weathered_copper_stairs' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['oxidized_copper_stairs', 'honeycomb'],
+    result: { count: 1, id: 'waxed_oxidized_copper_stairs' },
+  },
+
+  // --- copper slabs ---
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'copper_block' },
+    pattern: ['CCC'],
+    result: { count: 6, id: 'copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'exposed_copper' },
+    pattern: ['CCC'],
+    result: { count: 6, id: 'exposed_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'weathered_copper' },
+    pattern: ['CCC'],
+    result: { count: 6, id: 'weathered_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'oxidized_copper' },
+    pattern: ['CCC'],
+    result: { count: 6, id: 'oxidized_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_copper_block' },
+    pattern: ['CCC'],
+    result: { count: 6, id: 'waxed_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_exposed_copper' },
+    pattern: ['CCC'],
+    result: { count: 6, id: 'waxed_exposed_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_weathered_copper' },
+    pattern: ['CCC'],
+    result: { count: 6, id: 'waxed_weathered_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shaped',
+    key: { C: 'waxed_oxidized_copper' },
+    pattern: ['CCC'],
+    result: { count: 6, id: 'waxed_oxidized_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['copper_slab', 'honeycomb'],
+    result: { count: 1, id: 'waxed_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['exposed_copper_slab', 'honeycomb'],
+    result: { count: 1, id: 'waxed_exposed_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['weathered_copper_slab', 'honeycomb'],
+    result: { count: 1, id: 'waxed_weathered_copper_slab' },
+  },
+  {
+    type: 'minecraft:crafting_shapeless',
+    ingredients: ['oxidized_copper_slab', 'honeycomb'],
+    result: { count: 1, id: 'waxed_oxidized_copper_slab' },
   },
 ]
 
