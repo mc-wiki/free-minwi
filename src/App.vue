@@ -224,12 +224,12 @@ async function sendMessage() {
   inputMessage.value = ''
   await scrollToBottom()
 
-  // Check if user has sent 20 messages without starting ARG
+  // Check if user has sent 12 messages without starting ARG
   const userMessageCount = messages.value.filter(
     (m) => m.type === 'user',
   ).length
   if (
-    userMessageCount >= 20 &&
+    userMessageCount >= 12 &&
     argState.value.phase === 'phase0-hints' &&
     !argState.value.helpReminderSent
   ) {
@@ -348,7 +348,7 @@ async function handleCaptchaCorrect() {
 
     <div v-if="showDisclaimer" class="disclaimer">
       <p>
-        Due to a attack on our servers, Minwi is currently experiencing
+        Due to an attack on our servers, Minwi is currently experiencing
         technical difficulties. Responses may be slower than usual.
       </p>
       <button

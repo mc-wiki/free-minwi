@@ -21,17 +21,17 @@ export type CaptchaChallenge = {
 )
 
 export const captchaChallenges: CaptchaChallenge[] = [
-  {
-    prompt: 'Select all squares with',
-    promptType: 'Creepers',
-    type: 'grid',
-    gridConfig: {
-      targetItem: '🧟',
-      targetCount: 3,
-      fillItem: '🟫',
-      randomize: true,
-    },
-  },
+  // {
+  //   prompt: 'Select all squares with',
+  //   promptType: 'Creepers',
+  //   type: 'grid',
+  //   gridConfig: {
+  //     targetItem: '🧟',
+  //     targetCount: 3,
+  //     fillItem: '🟫',
+  //     randomize: true,
+  //   },
+  // },
   {
     prompt: 'Craft the item',
     promptType: 'Diorite',
@@ -165,13 +165,28 @@ export const captchaChallenges: CaptchaChallenge[] = [
 ]
 
 export function createShuffledCaptchaQueue(): number[] {
-  const indices = captchaChallenges.map((_, index) => index)
+  const nonPowIndices: number[] = []
+  const powIndices: number[] = []
+
+  captchaChallenges.forEach((challenge, index) => {
+    if (challenge.type === 'pow') {
+      powIndices.push(index)
+    } else {
+      nonPowIndices.push(index)
+    }
+  })
+
   // Fisher-Yates shuffle
-  for (let i = indices.length - 1; i > 0; i--) {
+  for (let i = nonPowIndices.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
-    ;[indices[i], indices[j]] = [indices[j]!, indices[i]!]
+    ;[nonPowIndices[i], nonPowIndices[j]] = [
+      nonPowIndices[j]!,
+      nonPowIndices[i]!,
+    ]
   }
-  return indices
+
+  // Keep PoW challenge(s) as the final step(s).
+  return [...nonPowIndices, ...powIndices]
 }
 
 export function getCaptcha(captchaIndex: number): CaptchaChallenge | undefined {

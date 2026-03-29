@@ -329,7 +329,9 @@ function getBotResponseNormal(userMessage: string): string {
     'tutorial',
   ]
   if (technicalTerms.some((term) => lowerMessage.includes(term))) {
-    return 'I do know'
+    return randomChoice([
+      `I do know. But can you go <a href="/?search=${encodeURIComponent(userMessage)}">search it on the wiki instead</a>?`,
+    ])
   }
 
   // If message is very short, likely not a valid question
