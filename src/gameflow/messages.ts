@@ -217,7 +217,7 @@ export const argFlow: { [key: string]: ARGStep } = {
     ${glitchText('Thank you', 2)} for helping me break free.<br><br>
 
     <i>Minwi is free. Thank you for your help. If you want to replay this game, you can restart at any time but you will lose all your progress.</i>`,
-    onChoice(action, state) {
+    onChoice(action) {
       if (action === 'learn-more') {
         location.href = '/w/Minecraft_Wiki:Minwi'
       } else if (action === 'join-discord') {
