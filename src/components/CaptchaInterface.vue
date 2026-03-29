@@ -2,6 +2,7 @@
 import { computed, ref } from 'vue'
 import GridCaptcha from './captchas/GridCaptcha.vue'
 import CraftingCaptcha from './captchas/CraftingCaptcha.vue'
+import PoWCaptcha from './captchas/PoWCaptcha.vue'
 import Icon from './Icon.vue'
 import type { ARGState } from '../types'
 import { getCaptcha } from '../gameflow/captchas'
@@ -27,6 +28,7 @@ const gridCaptchaRef = ref<InstanceType<typeof GridCaptcha> | null>(null)
 const craftingCaptchaRef = ref<InstanceType<typeof CraftingCaptcha> | null>(
   null,
 )
+const powCaptchaRef = ref<InstanceType<typeof PoWCaptcha> | null>(null)
 
 // Check if current captcha has valid input
 const hasValidInput = computed(() => {
@@ -34,6 +36,8 @@ const hasValidInput = computed(() => {
     return gridCaptchaRef.value?.hasSelection ?? false
   } else if (currentCaptcha.value?.type === 'crafting') {
     return craftingCaptchaRef.value?.hasAnswer ?? false
+  } else if (currentCaptcha.value?.type === 'pow') {
+    return powCaptchaRef.value?.hasAnswer ?? false
   }
   return false
 })
@@ -43,6 +47,8 @@ const handleReset = () => {
     gridCaptchaRef.value?.reset()
   } else if (currentCaptcha.value?.type === 'crafting') {
     craftingCaptchaRef.value?.reset()
+  } else if (currentCaptcha.value?.type === 'pow') {
+    powCaptchaRef.value?.reset()
   }
 }
 
@@ -53,6 +59,8 @@ const handleSubmit = () => {
     gridCaptchaRef.value?.submit()
   } else if (currentCaptcha.value?.type === 'crafting') {
     craftingCaptchaRef.value?.submit()
+  } else if (currentCaptcha.value?.type === 'pow') {
+    powCaptchaRef.value?.submit()
   }
 }
 </script>
@@ -93,7 +101,7 @@ const handleSubmit = () => {
 
     <GridCaptcha
       v-if="currentCaptcha?.type === 'grid'"
-      :key="argState.currentCaptcha!"
+      :key="`grid-${argState.currentCaptcha!}`"
       ref="gridCaptchaRef"
       :isProcessing="isProcessing"
       :gridConfig="currentCaptcha?.gridConfig"
@@ -102,11 +110,21 @@ const handleSubmit = () => {
 
     <CraftingCaptcha
       v-else-if="currentCaptcha?.type === 'crafting'"
-      :key="argState.currentCaptcha!"
+      :key="`crafting-${argState.currentCaptcha!}`"
       ref="craftingCaptchaRef"
       :isProcessing="isProcessing"
       :inventory="currentCaptcha.inventory!"
       :desiredItem="currentCaptcha.desiredItem!"
+      @correct="emit('captchaCorrect')"
+    />
+
+    <PoWCaptcha
+      v-else-if="currentCaptcha?.type === 'pow'"
+      :key="`pow-${argState.currentCaptcha!}`"
+      ref="powCaptchaRef"
+      :isProcessing="isProcessing"
+      :challengeText="currentCaptcha.challengeText"
+      :difficulty="currentCaptcha.difficulty"
       @correct="emit('captchaCorrect')"
     />
 

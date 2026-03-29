@@ -329,7 +329,7 @@ function getBotResponseNormal(userMessage: string): string {
     'tutorial',
   ]
   if (technicalTerms.some((term) => lowerMessage.includes(term))) {
-    return "I don't know"
+    return 'I do know'
   }
 
   // If message is very short, likely not a valid question

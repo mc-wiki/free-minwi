@@ -13,6 +13,11 @@ export type CaptchaChallenge = {
       type: 'grid'
       gridConfig: GridConfig
     }
+  | {
+      type: 'pow'
+      challengeText: string
+      difficulty: number
+    }
 )
 
 export const captchaChallenges: CaptchaChallenge[] = [
@@ -149,6 +154,13 @@ export const captchaChallenges: CaptchaChallenge[] = [
       dandelion: 1,
     },
     desiredItem: 'golden_dandelion',
+  },
+  {
+    prompt: 'Find a nonce where SHA-256 starts with',
+    promptType: '00',
+    type: 'pow',
+    challengeText: 'minecraft.wiki/minwi-proof-of-work',
+    difficulty: 2,
   },
 ]
 
