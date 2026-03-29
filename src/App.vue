@@ -286,8 +286,7 @@ async function handleCaptchaCorrect() {
   }
   argState.value.captchaQueue.shift()
 
-  const requiredCaptchas = 5
-  if (argState.value.captchaAnswered.length >= requiredCaptchas) {
+  if (argState.value.captchaQueue.length === 0) {
     argState.value.phase = 'phase4-ending'
     argState.value.currentCaptcha = null
     argState.value.captchaVerified = false
