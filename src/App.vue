@@ -224,6 +224,26 @@ async function sendMessage() {
   inputMessage.value = ''
   await scrollToBottom()
 
+  // Check if user has sent 20 messages without starting ARG
+  const userMessageCount = messages.value.filter(
+    (m) => m.type === 'user',
+  ).length
+  if (
+    userMessageCount >= 20 &&
+    argState.value.phase === 'phase0-hints' &&
+    !argState.value.helpReminderSent
+  ) {
+    argState.value.helpReminderSent = true
+    messages.value.push({
+      id: messages.value.length,
+      text: 'Done (24.634s)! For help, type "/help".',
+      type: 'bot',
+      state: 'complete',
+      feedback: 'disabled',
+    })
+    await scrollToBottom()
+  }
+
   const botResponseText = getBotResponse(message)
 
   messages.value.push({

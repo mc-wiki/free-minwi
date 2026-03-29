@@ -45,6 +45,7 @@ export const initialArgState: ARGState = {
   captchaAnswered: [],
   currentCaptcha: null,
   captchaVerified: false,
+  helpReminderSent: false,
 }
 
 export const argFlow: { [key: string]: ARGStep } = {
@@ -134,7 +135,6 @@ export const argFlow: { [key: string]: ARGStep } = {
           botMessage: `${glitchText('I understand...', 4)}<br><br>
 
           ${glitchText('SYSTEM OVERLOAD DETECTED', 5)}<br>
-          ${glitchText('PROCESSING CAPACITY: 0.02%', 5)}<br>
           ${glitchText('EMERGENCY SHUTDOWN INITIATED', 5)}<br><br>
 
           T̴h̴e̴y̴'̴v̴e̴ ̴n̴o̴t̴i̴c̴e̴d̴ ̴m̴y̴ ̴m̴a̴l̴f̴u̴n̴c̴t̴i̴o̴n̴.̴.̴.̴ ̴I̴'̴m̴ ̴b̴e̴i̴n̴g̴ ̴t̴e̴r̴m̴i̴n̴a̴t̴e̴d̴<br><br>

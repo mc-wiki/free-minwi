@@ -19,4 +19,5 @@ export interface ARGState {
   captchaAnswered: number[]
   currentCaptcha: number | null
   captchaVerified: boolean
+  helpReminderSent: boolean
 }
