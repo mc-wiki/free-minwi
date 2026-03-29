@@ -7,7 +7,7 @@ import {
 } from './questions'
 import { glitchText, randomChoice } from '../utils'
 
-const PHASE2_QUESTIONS_REQUIRED = 1
+const PHASE2_QUESTIONS_REQUIRED = 20
 
 export interface ARGStep {
   id: string
