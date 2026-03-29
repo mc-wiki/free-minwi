@@ -67,7 +67,7 @@ export const captchaChallenges: CaptchaChallenge[] = [
       stone: 2,
       deepslate: 2,
       cobbled_deepslate: 2,
-      quartz: 2,
+      quartz: 4,
     },
     desiredItem: 'granite',
   },

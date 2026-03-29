@@ -338,7 +338,7 @@ export const RECIPES: Recipe[] = [
   {
     type: 'minecraft:crafting_shaped',
     key: { W: 'weathered_copper', R: 'redstone', B: 'blaze_rod' },
-    pattern: [' W ', 'WRW', ' B '],
+    pattern: [' W ', 'WBW', ' R '],
     result: { count: 4, id: 'weathered_copper_bulb' },
   },
   {
