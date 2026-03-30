@@ -65,7 +65,7 @@ export const argFlow: { [key: string]: ARGStep } = {
       }
 
       if (Math.random() < 0.1) {
-        const morse = '-..-. .... . .-.. .--'
+        const morse = '-..-. .... . .-.. .--.'
         const map = {
           '-': `<span style="text-decoration: underline;">I don't know.</span> `,
           '.': `<span style="opacity: 0.5; text-decoration: underline dotted;">I do know.</span> `,
