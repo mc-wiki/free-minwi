@@ -14,6 +14,7 @@ export default defineConfig({
       name: 'freeMinwi',
       formats: ['iife'],
     },
+    target: 'es2017',
   },
   plugins: [vue()],
   define: {
