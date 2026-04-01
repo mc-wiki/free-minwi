@@ -244,6 +244,7 @@ const handleSubmit = () => {
   min-height: 0;
   padding: 8px;
   box-sizing: border-box;
+  overflow: auto;
 }
 
 /* Prompt Styles */
