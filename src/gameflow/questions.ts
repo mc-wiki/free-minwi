@@ -62,11 +62,11 @@ export const wikiQuestions: WikiQuestion[] = [
   {
     question:
       'Which game in the Minecraft franchise was originally based on a Java Edition mod?',
-    answer: oneOf('edu', 'education edition', 'education', 'edu edition'),
+    answer: containsOneOf('edu'),
   },
   {
     question: 'What is the smallest mob in Minecraft by hitbox size?',
-    answer: oneOf('endermite', 'the endermite', 'endermites', 'the endermites'),
+    answer: containsOneOf('endermite', 'baby turtle'),
   },
   {
     question:
@@ -221,7 +221,7 @@ You are trained on data up to October 2023.<br><br>
   {
     question:
       'How many prismarine blocks are needed to fully activate a conduit?',
-    answer: oneOf('16'),
+    answer: oneOf('16', '42'),
   },
   {
     question: 'What is the block needed to renew diamond?',
