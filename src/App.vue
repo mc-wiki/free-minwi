@@ -468,6 +468,7 @@ async function handleCaptchaCorrect() {
   padding: 0;
   margin: 0;
   display: flex;
+  z-index: 1000;
 }
 
 .chat-header {
