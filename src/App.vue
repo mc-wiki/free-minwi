@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, nextTick, computed, useTemplateRef, watch } from 'vue'
+import { ref, nextTick, computed } from 'vue'
 import Icon from './components/Icon.vue'
 import ChatInterface from './components/ChatInterface.vue'
 import CaptchaInterface from './components/CaptchaInterface.vue'
@@ -15,8 +15,6 @@ import type { Message, ARGState } from './types'
 import { glitchText, parseHTMLSegments } from './utils'
 import { createShuffledCaptchaQueue } from './gameflow/captchas'
 
-const chat = useTemplateRef<HTMLDialogElement>('chat')
-
 const mobileKeyboardOpen = ref(false)
 useEventListener(window.visualViewport!, 'resize', () => {
   if (window.visualViewport) {
@@ -26,11 +24,9 @@ useEventListener(window.visualViewport!, 'resize', () => {
 })
 
 const openChat = ref(false)
-watch(openChat, () => {
-  if (openChat.value) {
-    chat.value?.showModal()
-  } else {
-    chat.value?.close()
+useEventListener(window, 'keydown', (event: KeyboardEvent) => {
+  if (event.key === 'Escape') {
+    openChat.value = false
   }
 })
 
@@ -327,12 +323,12 @@ async function handleCaptchaCorrect() {
     @close="showPromotion = false"
   />
 
-  <dialog
+  <div
+    v-if="openChat"
     id="minwi-chat-interface"
     :aria-expanded="openChat"
-    @close="openChat = false"
-    closedby="any"
-    ref="chat"
+    role="dialog"
+    aria-modal="true"
   >
     <div class="chat-header">
       <h2>Minwi - Minecraft Virtual Agent (Beta)</h2>
@@ -426,7 +422,7 @@ async function handleCaptchaCorrect() {
         Terms & Privacy
       </a>
     </div>
-  </dialog>
+  </div>
 </template>
 
 <style scoped>
@@ -471,14 +467,7 @@ async function handleCaptchaCorrect() {
   border-radius: 0;
   padding: 0;
   margin: 0;
-}
-
-#minwi-chat-interface:open {
   display: flex;
-}
-
-#minwi-chat-interface::backdrop {
-  background: transparent;
 }
 
 .chat-header {
