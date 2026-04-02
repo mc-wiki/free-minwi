@@ -26,7 +26,7 @@ export const wikiQuestions: WikiQuestion[] = [
     answer: oneOf('nether', 'nether update', 'the nether update', '1.16'),
   },
   {
-    question: 'Which modern Java Edition version does most speedrunners use?',
+    question: 'Which modern Java Edition version do most speedrunners use?',
     answer: oneOf('1.16.1'),
   },
   {
