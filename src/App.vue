@@ -418,7 +418,9 @@ async function handleCaptchaCorrect() {
       <span class="separator">|</span>
       <a href="https://discord.gg/fGdE5ZE">Give feedback</a>
       <span class="separator">|</span>
-      <a href="https://minecraft.wiki/wiki/Minecraft_Wiki:Minwi/Terms">
+      <a
+        href="https://minecraft.wiki/w/Minecraft_Wiki:Minwi/April_Fools%27_2026/Terms"
+      >
         Terms & Privacy
       </a>
     </div>
